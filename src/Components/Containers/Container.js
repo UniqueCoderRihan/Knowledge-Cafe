@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Blog from '../Blog/Blog';
 import './Container.css'
+import BookMark from '../Bookmark/BookMark';
 
 const Container = () => {
     const [blogs, setBlog] = useState([]);
@@ -24,7 +25,7 @@ const Container = () => {
                 }
             </div>
             <div className='bookmarkContainer'>
-                <Container></Container>
+                <BookMark></BookMark>
             </div>
         </div>
     );
