@@ -12,11 +12,13 @@ const Blog = (props) => {
                 <img className='blogImg' src={img} alt="" />
                 <div className="card-body">
                     <div>
-                        <div className='author'>
-                            <img className='w-10 rounded-full' src={authorImg} alt="" />
-                            <div>
-                                <p>{author}</p>
-                                <p>{publisheDate}</p>
+                        <div className='auhtorDetails'>
+                            <div className='author'>
+                                <img className='w-10 rounded-full' src={authorImg} alt="" />
+                                <div>
+                                    <p>{author}</p>
+                                    <p>{publisheDate}</p>
+                                </div>
                             </div>
                             <div className='blogInfo'>
                                 <p>{Readtime} Min Read <span> <FontAwesomeIcon icon={faBookBookmark}/> </span> </p> 
