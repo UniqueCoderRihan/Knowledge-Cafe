@@ -6,7 +6,6 @@ import './Blog.css';
 const Blog = (props) => {
     
     const{handleReadTime} = props.handleReadTime;
-    // console.log(handleReadTime);
     const { img, title, author, id, authorImg, tag, publisheDate, Readtime } = props.blog;
     return (
         <div>

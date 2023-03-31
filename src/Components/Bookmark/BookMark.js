@@ -1,9 +1,12 @@
 import React from 'react';
+import SpenTime from '../SpentTime/SpenTime';
 
-const BookMark = () => {
+const BookMark = (spentime) => {
     return (
         <div>
-            <p>Iam From BookMark Container</p>
+            <SpenTime
+            spentime={spentime}
+            ></SpenTime>
         </div>
     );
 };
