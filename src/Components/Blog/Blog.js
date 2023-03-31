@@ -8,8 +8,8 @@ const Blog = (props) => {
     const { img, title, author, id, authorImg, tag, publisheDate, Readtime } = props.blog;
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src={img} alt="" /></figure>
+            <div className="card">
+                <img className='blogImg' src={img} alt="" />
                 <div className="card-body">
                     <div>
                         <div className='author'>

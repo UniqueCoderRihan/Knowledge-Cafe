@@ -2,4 +2,9 @@
     display: flex;
     justify-content: flex-start;
     gap: 20px;
+    
+}
+.blogImg{
+    width: 100%;
+    padding: 20px;
 }
