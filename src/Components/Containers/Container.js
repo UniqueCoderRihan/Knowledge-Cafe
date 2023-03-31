@@ -5,7 +5,8 @@ import Blog from '../Blog/Blog';
 import './Container.css'
 import BookMark from '../Bookmark/BookMark';
 
-const Container = () => {
+const Container = (handleReadTime) => {
+    // console.log(handleReadTime);
     const [blogs, setBlog] = useState([]);
     // const [bookMarked, setBookMarked] = useState([]);
 
@@ -21,6 +22,7 @@ const Container = () => {
                     blogs.map(blog => <Blog
                         key={blog.id}
                         blog={blog}
+                        handleReadTime={handleReadTime}
                     ></Blog>)
                 }
             </div>

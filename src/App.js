@@ -3,11 +3,16 @@ import './App.css';
 import Container from './Components/Containers/Container';
 import Header from './Components/Header/Header';
 
-function App() {
+function App(Readtime) {
+  const handleReadTime = (Readtime) =>{
+    console.log(Readtime);
+  }
   return (
     <div className="App container">
       <Header></Header>
-      <Container></Container>
+      <Container
+      handleReadTime={handleReadTime}
+      ></Container>
     </div>
   );
 }
