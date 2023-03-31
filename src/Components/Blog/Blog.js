@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookBookmark } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './Blog.css';
 
@@ -17,7 +19,7 @@ const Blog = (props) => {
                                 <p>{publisheDate}</p>
                             </div>
                             <div className='blogInfo'>
-                                <p>{Readtime} Min Read <span>add</span> </p> 
+                                <p>{Readtime} Min Read <span> <FontAwesomeIcon icon={faBookBookmark}/> </span> </p> 
                             </div>
                         </div>
                     </div>
@@ -30,7 +32,9 @@ const Blog = (props) => {
                         <div className="badge badge-outline">{tag.secound}</div>
                         <div className="badge badge-outline">{tag.frist}</div>
                     </div>
-                    <p className='text-cyan-500'>Marks As Read</p>
+                    
+
+                    <p className='text-cyan-500'>Marks As Read </p>
                 </div>
             </div>
         </div>
