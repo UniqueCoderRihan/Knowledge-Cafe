@@ -4,6 +4,9 @@ import './App.css';
 import Container from './Components/Containers/Container';
 import Header from './Components/Header/Header';
 import Question from './Components/Questions/Question';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Selected from './Components/Seleted/Selected';
 
 function App(Readtime,id,title) {
   const [SpenTime,setTime] = useState("");
@@ -22,22 +25,17 @@ function App(Readtime,id,title) {
       setTime(ConvertedReadTime);
     }
   }
-  const  [bmarks, setbmarks]=useState([])
+  const  [bookMarks, setbokmarks]=useState([])
+  const notify = () => toast("Already Marked!");
 
-  const addMark=(id,title)=> {
-        const isBookMared = bmarks.find((marked) => marked.id === id);
-        // console.log(isBookMared);
-        if(isBookMared){
-          
-          setbmarks([...bmarks, id,title])
-        // toast("You Have Already Bookmarked This Blog");
-        }
-        else {
-
-        setbmarks([...bmarks, id,title])
-        
-        }
-        
+  const addMark=(data)=> {
+    const exist = bookMarks.find(b=>b.id === data.id)
+    if(exist){
+      notify()
+      return
+    }
+    const newBookMark = [...bookMarks,data]
+    setbokmarks(newBookMark);
       }
 
   return (
@@ -47,9 +45,13 @@ function App(Readtime,id,title) {
       handleReadTime={handleReadTime}
       SpenTime = {SpenTime}
       addMark={addMark}
-      bmarks={bmarks}
+      bookMarks={bookMarks}
+
       ></Container>
+      
+      <ToastContainer/>
       <Question></Question>
+      
     </div>
   );
   

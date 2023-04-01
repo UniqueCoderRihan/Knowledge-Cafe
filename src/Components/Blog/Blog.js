@@ -6,6 +6,8 @@ import './Blog.css';
 const Blog = (props) => {
     // console.log(props);
     const { img, title, author, id, authorImg, tag, publisheDate, Readtime } = props.blog;
+    const konoEktanam = props.blog;
+    console.log(konoEktanam);
     return (
         <div>
             <div className="card">
@@ -21,7 +23,7 @@ const Blog = (props) => {
                                 </div>
                             </div>
                             <div className='blogInfo'>
-                                <p>{Readtime} Min Read <span onClick={()=>props.addMark(id,title)}> <FontAwesomeIcon icon={faBookBookmark}/> </span> </p> 
+                                <p>{Readtime} Min Read <span onClick={()=>props.addMark(konoEktanam)}> <FontAwesomeIcon icon={faBookBookmark}/> </span> </p> 
                             </div>
                         </div>
                     </div>

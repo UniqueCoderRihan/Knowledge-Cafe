@@ -30,7 +30,7 @@ const Container = (props) => {
             <div className='bookmarkContainer'>
                 <BookMark
                 spentime={props.spentime}
-                bmarks={props.bmarks}
+                bookMarks={props.bookMarks}
                 
                 ></BookMark>
             </div>

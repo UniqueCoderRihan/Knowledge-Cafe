@@ -2,15 +2,16 @@ import React from 'react';
 import SpenTime from '../SpentTime/SpenTime';
 import Cart from '../Cart/Cart';
 
-const BookMark = (props) => {
+const BookMark = ({bookMarks,spentime}) => {
+    // console.log();
     return (
         <div>
             <SpenTime
-            spentime={props.spentime}
+            spentime={spentime}
             ></SpenTime>
             <div>
                 <Cart
-                BookMark={props.bmarks}
+                bookMarks={bookMarks}
                 ></Cart>
             </div>
         </div>
