@@ -5,7 +5,7 @@ import Container from './Components/Containers/Container';
 import Header from './Components/Header/Header';
 import Question from './Components/Questions/Question';
 
-function App(Readtime,id) {
+function App(Readtime,id,title) {
   const [SpenTime,setTime] = useState("");
   const handleReadTime = (Readtime) =>{
     const previousTime = JSON.parse(localStorage.getItem("ReadTime",Readtime));
@@ -24,17 +24,17 @@ function App(Readtime,id) {
   }
   const  [bmarks, setbmarks]=useState([])
 
-  const addMark=(id)=> {
+  const addMark=(id,title)=> {
         const isBookMared = bmarks.find((marked) => marked.id === id);
         console.log(isBookMared);
         if(isBookMared){
           
-          setbmarks([...bmarks], id)
+          setbmarks([...bmarks, id,title])
         // toast("You Have Already Bookmarked This Blog");
         }
         else {
 
-        setbmarks([...bmarks], id)
+        setbmarks([...bmarks, id,title])
         
         }
         
@@ -47,6 +47,7 @@ function App(Readtime,id) {
       handleReadTime={handleReadTime}
       SpenTime = {SpenTime}
       addMark={addMark}
+      bmarks={bmarks}
       ></Container>
       <Question></Question>
     </div>

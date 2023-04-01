@@ -1,14 +1,17 @@
 import React from 'react';
 import SpenTime from '../SpentTime/SpenTime';
+import Cart from '../Cart/Cart';
 
-const BookMark = (spentime) => {
+const BookMark = (props) => {
     return (
         <div>
             <SpenTime
-            spentime={spentime}
+            spentime={props.spentime}
             ></SpenTime>
             <div>
-                <h3>Hello Sir Wait Please</h3>
+                <Cart
+                BookMark={props.bmarks}
+                ></Cart>
             </div>
         </div>
     );

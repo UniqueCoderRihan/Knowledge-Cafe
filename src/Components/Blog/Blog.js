@@ -21,7 +21,7 @@ const Blog = (props) => {
                                 </div>
                             </div>
                             <div className='blogInfo'>
-                                <p>{Readtime} Min Read <span onClick={()=>props.addMark(id)}> <FontAwesomeIcon icon={faBookBookmark}/> </span> </p> 
+                                <p>{Readtime} Min Read <span onClick={()=>props.addMark(id,title)}> <FontAwesomeIcon icon={faBookBookmark}/> </span> </p> 
                             </div>
                         </div>
                     </div>
