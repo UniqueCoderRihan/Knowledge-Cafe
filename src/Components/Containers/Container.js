@@ -5,15 +5,16 @@ import Blog from '../Blog/Blog';
 import './Container.css'
 import BookMark from '../Bookmark/BookMark';
 
-const Container = (handleReadTime,{spentime}) => {
-
+const Container = (props) => {
+    // console.log(props.addMark);
     const [blogs, setBlog] = useState([]);
-
+    const [bookMars,SetBookMarks] = useState([]);
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [])
+    
     return (
         <div className='bodyContainer'>
             <div className='blog-container'>
@@ -21,13 +22,15 @@ const Container = (handleReadTime,{spentime}) => {
                     blogs.map(blog => <Blog
                         key={blog.id}
                         blog={blog}
-                        handleReadTime={handleReadTime}
+                        handleReadTime={props.handleReadTime}
+                        addMark={props.addMark}
                     ></Blog>)
                 }
             </div>
             <div className='bookmarkContainer'>
                 <BookMark
-                spentime={spentime}
+                spentime={props.spentime}
+                
                 ></BookMark>
             </div>
         </div>

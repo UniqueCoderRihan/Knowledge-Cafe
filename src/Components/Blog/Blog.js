@@ -4,8 +4,7 @@ import React from 'react';
 import './Blog.css';
 
 const Blog = (props) => {
-    
-    const{handleReadTime} = props.handleReadTime;
+    console.log(props);
     const { img, title, author, id, authorImg, tag, publisheDate, Readtime } = props.blog;
     return (
         <div>
@@ -22,7 +21,7 @@ const Blog = (props) => {
                                 </div>
                             </div>
                             <div className='blogInfo'>
-                                <p>{Readtime} Min Read <span> <FontAwesomeIcon icon={faBookBookmark}/> </span> </p> 
+                                <p>{Readtime} Min Read <span onClick={()=>props.addMark(id)}> <FontAwesomeIcon icon={faBookBookmark}/> </span> </p> 
                             </div>
                         </div>
                     </div>
@@ -37,7 +36,7 @@ const Blog = (props) => {
                     </div>
                     
 
-                    <p className='text-cyan-500' onClick={()=> handleReadTime(Readtime)}>Marks As Read </p>
+                    <p className='text-cyan-500' onClick={()=> props.handleReadTime(Readtime)}>Marks As Read </p>
                 </div>
             </div>
         </div>

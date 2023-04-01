@@ -21,12 +21,16 @@ function App(Readtime) {
       setTime(ConvertedReadTime);
     }
   }
+  const addMark = (a)=>{
+        console.log('log hocce');
+  }
   return (
     <div className="App container">
       <Header></Header>
       <Container
       handleReadTime={handleReadTime}
       SpenTime = {SpenTime}
+      addMark={addMark}
       ></Container>
     </div>
   );
