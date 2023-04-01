@@ -6,7 +6,7 @@ import Header from './Components/Header/Header';
 import Question from './Components/Questions/Question';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Selected from './Components/Seleted/Selected';
+
 
 function App(Readtime,id,title) {
   const [SpenTime,setTime] = useState("");
