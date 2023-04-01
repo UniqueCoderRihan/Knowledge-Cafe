@@ -4,7 +4,7 @@ import './App.css';
 import Container from './Components/Containers/Container';
 import Header from './Components/Header/Header';
 
-function App(Readtime) {
+function App(Readtime,id) {
   const [SpenTime,setTime] = useState("");
   const handleReadTime = (Readtime) =>{
     const previousTime = JSON.parse(localStorage.getItem("ReadTime",Readtime));
@@ -21,8 +21,8 @@ function App(Readtime) {
       setTime(ConvertedReadTime);
     }
   }
-  const addMark = (a)=>{
-        console.log('log hocce');
+  const addMark = (id)=>{
+        console.log(id);
   }
   return (
     <div className="App container">
