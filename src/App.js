@@ -21,9 +21,24 @@ function App(Readtime,id) {
       setTime(ConvertedReadTime);
     }
   }
-  const addMark = (id)=>{
-        console.log(id);
-  }
+  const  [bmarks, setbmarks]=useState([])
+
+  const addMark=(id)=> {
+        const isBookMared = bmarks.find((marked) => marked.id === id);
+        console.log(isBookMared);
+        if(isBookMared){
+          
+          setbmarks([...bmarks], id)
+        // toast("You Have Already Bookmarked This Blog");
+        }
+        else {
+
+        setbmarks([...bmarks], id)
+        
+        }
+        
+      }
+
   return (
     <div className="App container">
       <Header></Header>
@@ -34,6 +49,6 @@ function App(Readtime,id) {
       ></Container>
     </div>
   );
-}
-
+  
+  }
 export default App;

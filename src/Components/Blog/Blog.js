@@ -4,7 +4,7 @@ import React from 'react';
 import './Blog.css';
 
 const Blog = (props) => {
-    console.log(props);
+    // console.log(props);
     const { img, title, author, id, authorImg, tag, publisheDate, Readtime } = props.blog;
     return (
         <div>

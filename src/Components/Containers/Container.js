@@ -8,7 +8,7 @@ import BookMark from '../Bookmark/BookMark';
 const Container = (props) => {
     // console.log(props.addMark);
     const [blogs, setBlog] = useState([]);
-    const [bookMars,SetBookMarks] = useState([]);
+    
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
