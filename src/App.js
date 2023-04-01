@@ -26,7 +26,7 @@ function App(Readtime,id,title) {
 
   const addMark=(id,title)=> {
         const isBookMared = bmarks.find((marked) => marked.id === id);
-        console.log(isBookMared);
+        // console.log(isBookMared);
         if(isBookMared){
           
           setbmarks([...bmarks, id,title])
