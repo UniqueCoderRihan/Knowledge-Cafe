@@ -8,11 +8,7 @@ const Header = () => {
                 <div className="flex-1">
                     <a href='/Home' className="btn btn-ghost normal-case text-2xl">Programming Cafe</a>
                 </div>
-                <div className='nabvarLink'>
-                    <a href="/home">Home</a>
-                    <a href="/home">Links</a>
-                    <a href="/home">Pages</a>
-                </div>
+                
                 <div className="flex-none gap-2">
                     <div className="dropdown dropdown-end">
                     
