@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import Container from './Components/Containers/Container';
 import Header from './Components/Header/Header';
+import Question from './Components/Questions/Question';
 
 function App(Readtime,id) {
   const [SpenTime,setTime] = useState("");
@@ -47,6 +48,7 @@ function App(Readtime,id) {
       SpenTime = {SpenTime}
       addMark={addMark}
       ></Container>
+      <Question></Question>
     </div>
   );
   
